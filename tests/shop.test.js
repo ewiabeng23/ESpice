@@ -39,7 +39,7 @@ test("prices add up correctly", () => {
     fulfilment: "collection",
   });
   assert.deepEqual(p.errors, []);
-  assert.equal(p.subtotal, 950 * 2 + 300);
+  assert.equal(p.subtotal, Shop.findItem("beef-suya").price * 2 + Shop.findItem("zobo").price);
   assert.equal(p.total, p.subtotal);
 });
 
@@ -47,7 +47,7 @@ test("delivery fee and minimum order are applied", () => {
   const ok = Shop.priceOrder({ items: [{ id: "beef-suya", qty: 2, spice: "mild" }], fulfilment: "delivery", postcode: "se15 4st" });
   assert.deepEqual(ok.errors, []);
   assert.equal(ok.deliveryFee, 250);
-  assert.equal(ok.total, 1900 + 250);
+  assert.equal(ok.total, Shop.findItem("beef-suya").price * 2 + 250);
 
   const tooSmall = Shop.priceOrder({ items: [{ id: "zobo", qty: 1 }], fulfilment: "delivery", postcode: "SE15 4ST" });
   assert.match(tooSmall.errors[0], /minimum order/);

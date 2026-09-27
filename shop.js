@@ -60,11 +60,13 @@
   // image: optional, e.g. "images/beef-suya.jpg" (put photos in site/images/)
   var MENU = [
     {
-      id: "suya", name: "Suya",
-      note: "Served with sliced onions, tomatoes and cabbage, plus extra yaji on the side.",
+      id: "suya", name: "Suya & grills",
+      note: "Served with sliced onions, tomatoes and cabbage, plus extra spice on the side.",
       items: [
-        { id: "beef-suya", name: "Beef suya", price: 950, spicy: true, allergens: ["peanuts"],
-          desc: "Thin-sliced beef rubbed in our house yaji and grilled over charcoal until the edges catch." },
+        { id: "beef-suya", name: "Tozo", price: 1099, spicy: true, allergens: ["peanuts"],
+          desc: "Thin-sliced beef rubbed in our house spices and grilled over charcoal until the edges catch." },
+        { id: "grilled-pork", name: "Grilled pork", price: 1299, spicy: true,
+          desc: "Pork marinated in our house spices and grilled over charcoal until tender and smoky." },
         { id: "chicken-suya", name: "Chicken suya", price: 850, spicy: true, allergens: ["peanuts"],
           desc: "Boneless thigh, marinated overnight so it stays juicy on the grill." },
         { id: "ram-suya", name: "Ram suya", price: 1150, spicy: true, allergens: ["peanuts"],
@@ -75,42 +77,39 @@
     },
     {
       id: "fish", name: "Grilled fish",
-      note: "Whole fish, scored, peppered and grilled to order. Allow about 25 minutes.",
+      note: "Whole fish, scored, peppered and grilled to order, then served with our special Cameroonian sauce. Allow about 25 minutes.",
       items: [
-        { id: "croaker", name: "Grilled croaker", price: 1600, spicy: true, allergens: ["fish"],
+        { id: "croaker", name: "Grilled croaker", price: 2399, spicy: true, allergens: ["fish"],
           desc: "Whole croaker with pepper sauce, onions and a wedge of lemon." },
-        { id: "tilapia", name: "Grilled tilapia", price: 1400, spicy: true, allergens: ["fish"],
-          desc: "Whole tilapia, sweet and flaky, finished with our pepper sauce." },
-        { id: "mackerel", name: "Peppered mackerel", price: 1200, spicy: true, allergens: ["fish"],
+        { id: "mackerel", name: "Peppered mackerel", price: 1599, spicy: true, allergens: ["fish"],
           desc: "Titus mackerel with crisp, smoky skin and soft flesh underneath." },
-        { id: "catfish", name: "Pepper-grilled catfish", price: 1850, spicy: true, allergens: ["fish"],
+        { id: "tilapia", name: "Grilled tilapia", price: 2099, spicy: true, allergens: ["fish"],
+          desc: "Whole tilapia, sweet and flaky, finished with our pepper sauce." },
+        { id: "catfish", name: "Pepper-grilled catfish", price: 2099, spicy: true, allergens: ["fish"],
           desc: "Point-and-kill style catfish in a thick pepper glaze. Feeds two." }
       ]
     },
     {
       id: "platters", name: "Platters",
-      note: "Everything on one tray, made for sharing.",
+      note: "Everything on one tray, made for sharing, with our special Cameroonian sauce.",
       items: [
-        { id: "suya-for-two", name: "Suya for two", price: 2600, spicy: true, allergens: ["peanuts"],
+        { id: "suya-for-two", name: "Suya for two", price: 2699, spicy: true, allergens: ["peanuts"],
           desc: "Beef, chicken and ram suya with a side of dodo." },
-        { id: "family-platter", name: "Family grill platter", price: 4500, spicy: true, allergens: ["peanuts", "fish"],
-          desc: "Beef and chicken suya, a whole tilapia, dodo and roasted yam. Feeds four." }
+        { id: "family-platter", name: "Family grill platter", price: 6599, spicy: true, allergens: ["peanuts", "fish"],
+          desc: "Beef and chicken suya, a whole tilapia, grilled pork, dodo, fried yam and miyondo. Feeds four. Want it your way? Tell us in the order notes and we'll customise it." }
       ]
     },
     {
       id: "sides", name: "Sides",
       items: [
-        { id: "dodo", name: "Fried plantain (dodo)", price: 400, desc: "Ripe plantain, fried until sweet and golden." },
-        { id: "yam", name: "Roasted yam", price: 450, desc: "Charcoal-roasted, with palm-oil pepper sauce." },
-        { id: "chips", name: "Chips", price: 350, desc: "Thick-cut and salted." },
-        { id: "extra-yaji", name: "Pot of yaji", price: 150, allergens: ["peanuts"], desc: "Our house suya spice, to take home." }
+        { id: "dodo", name: "Fried plantain (dodo)", price: 399, desc: "Ripe plantain, fried until sweet and golden." },
+        { id: "yam", name: "Fried yam", price: 450, desc: "Yam, fried until golden and crisp outside, soft inside." }
       ]
     },
     {
       id: "drinks", name: "Drinks",
       items: [
         { id: "zobo", name: "Zobo", price: 300, desc: "Chilled hibiscus with ginger and pineapple, made in-house." },
-        { id: "chapman", name: "Chapman", price: 350, desc: "Fruity Nigerian punch with bitters and cucumber." },
         { id: "malta", name: "Malta", price: 220, desc: "Chilled malt drink, 330ml can." },
         { id: "water", name: "Still water", price: 120, desc: "500ml bottle." }
       ]
