@@ -1,0 +1,4 @@
+#!/bin/sh
+# Runs the tests before every `git push`. If anything fails, the push is stopped.
+echo "Running tests before push..."
+npm test --silent || { echo "\nTests failed, so nothing was pushed. Fix the problem and push again."; exit 1; }

@@ -1,0 +1,16 @@
+{
+  "name": "espice-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ESpice: menu, basket and Stripe checkout",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "node dev-server.js",
+    "dev:vercel": "vercel dev",
+    "test": "node --test",
+    "prepare": "git config core.hooksPath .githooks 2>/dev/null || true"
+  },
+  "dependencies": {
+    "stripe": "^17.7.0"
+  }
+}
