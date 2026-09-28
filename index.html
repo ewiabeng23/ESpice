@@ -255,6 +255,7 @@ body.drawer-open .toast{bottom:auto;top:calc(76px + env(safe-area-inset-top,0px)
     <a class="brand" href="#top" data-fill="name">ESpice</a>
     <nav class="nav" aria-label="Main">
       <a href="#menu">Menu</a>
+      <a href="#about">Our story</a>
       <a href="#how">How to order</a>
       <a href="#catering">Catering</a>
       <a href="#find">Find us</a>
@@ -272,7 +273,7 @@ body.drawer-open .toast{bottom:auto;top:calc(76px + env(safe-area-inset-top,0px)
     <div>
       <p class="status" id="status"><span class="status-dot"></span><span id="statusText">Checking today's hours</span></p>
       <h1>Charcoal suya &amp; peppered fish</h1>
-      <p class="lede" id="lede">Hand-sliced beef, chicken and whole fish, rubbed in our house yaji and grilled over real charcoal. Order for collection or delivery across south-east London.</p>
+      <p class="lede" id="lede">Hand-sliced beef, chicken and whole fish, rubbed in our house spices and grilled over real charcoal. Order for collection or delivery across south-east London.</p>
       <div class="ctas">
         <a class="btn btn-gold" href="#menu">See the menu</a>
         <a class="btn btn-ghost" data-wa target="_blank" rel="noopener">
@@ -347,13 +348,99 @@ body.drawer-open .toast{bottom:auto;top:calc(76px + env(safe-area-inset-top,0px)
   <p class="allergy-note"><strong>Allergies:</strong> our yaji spice is made with ground peanuts, and we grill fish and meat over the same coals. If you have an allergy, message us before you order and we'll talk you through what's safe.</p>
 </section>
 
-<section class="how" id="how" aria-labelledby="howTitle" style="background:var(--surface)">
+<section class="about" id="about" aria-labelledby="aboutTitle">
+  <span class="about-deco about-deco-left" aria-hidden="true"><svg viewBox="0 0 230 270" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 230Q90 140 200 40"/><path d="M29.5 218.0Q42.0 219.3 54.4 214.4"/><path d="M29.5 218.0Q25.5 206.1 27.7 192.9"/><path d="M39.4 205.8Q51.4 207.3 63.4 202.7"/><path d="M39.4 205.8Q35.7 194.3 37.9 181.7"/><path d="M49.6 193.6Q61.1 195.1 72.7 190.9"/><path d="M49.6 193.6Q46.2 182.5 48.5 170.3"/><path d="M60.2 181.3Q71.3 182.9 82.5 179.0"/><path d="M60.2 181.3Q57.1 170.5 59.4 158.9"/><path d="M71.1 168.9Q81.7 170.6 92.5 166.9"/><path d="M71.1 168.9Q68.2 158.5 70.7 147.4"/><path d="M82.4 156.4Q92.5 158.2 102.9 154.8"/><path d="M82.4 156.4Q79.8 146.4 82.2 135.8"/><path d="M94.0 143.8Q103.7 145.6 113.7 142.5"/><path d="M94.0 143.8Q91.6 134.3 94.1 124.1"/><path d="M106.0 131.2Q115.3 133.0 124.8 130.1"/><path d="M106.0 131.2Q103.9 122.0 106.3 112.4"/><path d="M118.4 118.4Q127.2 120.2 136.3 117.6"/><path d="M118.4 118.4Q116.4 109.7 118.9 100.5"/><path d="M131.1 105.6Q139.4 107.4 148.1 105.0"/><path d="M131.1 105.6Q129.3 97.2 131.7 88.6"/><path d="M144.2 92.6Q152.0 94.4 160.3 92.2"/><path d="M144.2 92.6Q142.5 84.7 144.9 76.5"/><path d="M157.6 79.6Q165.0 81.4 172.8 79.4"/><path d="M157.6 79.6Q156.1 72.1 158.5 64.4"/><path d="M171.4 66.5Q178.3 68.2 185.7 66.4"/><path d="M171.4 66.5Q170.1 59.5 172.3 52.2"/><path d="M185.5 53.3Q192.0 55.0 198.9 53.3"/><path d="M185.5 53.3Q184.3 46.7 186.5 39.9"/><path d="M150 250c-26 0-40-22-34-44 5-18 22-28 32-44 3 14 22 24 30 42 9 24-4 46-28 46z"/><path d="M148 162c-2-8 0-14 4-18" /><path d="M140 212c2 14 6 26 12 34M160 208c0 16-2 28-6 38" opacity=".6"/></svg></span>
+  <span class="about-deco about-deco-right" aria-hidden="true"><svg viewBox="0 0 220 260" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M70 40c30-4 52 10 58 34 10 44-8 104-54 160-6 8-14 4-12-6 12-54 10-100-6-140-8-20-6-44 14-48z"/><path d="M76 40c-2-12 4-22 16-28M92 12c6 0 10 4 12 8" /><path d="M84 70c8 30 8 70-6 120" opacity=".55"/><path d="M150 150c18-10 42-6 50 12 8 20-4 44-26 50-22 6-40-8-42-28-1-14 6-28 18-34z"/><path d="M168 146c0-10 6-16 14-18" /><path d="M160 168c-6 10-6 22 0 32" opacity=".55"/></svg></span>
+  <div class="wrap about-inner">
+    <div class="about-tabs" role="tablist" aria-label="About ESpice">
+      <button role="tab" id="tab-welcome" aria-controls="panel-welcome" aria-selected="true">Welcome</button>
+      <button role="tab" id="tab-story" aria-controls="panel-story" aria-selected="false" tabindex="-1">Our story</button>
+      <button role="tab" id="tab-grill" aria-controls="panel-grill" aria-selected="false" tabindex="-1">The grill</button>
+      <button role="tab" id="tab-sauce" aria-controls="panel-sauce" aria-selected="false" tabindex="-1">Cameroon sauce</button>
+    </div>
+    <div class="about-panel" role="tabpanel" id="panel-welcome" aria-labelledby="tab-welcome">
+      <p class="about-eyebrow">Who we are</p>
+      <h2 class="about-title" id="aboutTitle">A taste of Cameroon, straight from the grill</h2>
+      <p>ESpice brings the flavours of Cameroon to London: Tozo, peppered fish and whole grills cooked over real charcoal and finished with our special Cameroonian sauce. Every order is grilled fresh, at the heat you choose.</p>
+    </div>
+    <div class="about-panel" role="tabpanel" id="panel-story" aria-labelledby="tab-story" hidden>
+      <p class="about-eyebrow">From Bamenda to London</p>
+      <h2 class="about-title">It started with family</h2>
+      <p>I grew up in Bamenda, where the smell of charcoal and spice meant good food and good company. I started cooking and grilling for family and friends, and every gathering turned into a feast. What began as cooking for the people I love became a passion. Now I want everyone to have a taste of Cameroon.</p>
+    </div>
+    <div class="about-panel" role="tabpanel" id="panel-grill" aria-labelledby="tab-grill" hidden>
+      <p class="about-eyebrow">How we cook</p>
+      <h2 class="about-title">Real charcoal, no shortcuts</h2>
+      <p>Every skewer and every fish is cooked over real charcoal. The meat is cut thin and rubbed with our house spices, and the fish is scored, peppered and grilled whole until the skin crisps. It takes time, and you can taste it.</p>
+    </div>
+    <div class="about-panel" role="tabpanel" id="panel-sauce" aria-labelledby="tab-sauce" hidden>
+      <p class="about-eyebrow">Our signature</p>
+      <h2 class="about-title">The sauce that makes it Cameroonian</h2>
+      <p>Our fish and platters come with a special Cameroonian sauce, made the way we make it back home. The recipe stays in the family, but we will tell you this much: it is bold, it is fresh, and once you have tried it you will ask for extra.</p>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how" aria-labelledby="howTitle">
   <div class="wrap">
-    <h2 class="section-title" id="howTitle">How to order</h2>
-    <ol class="steps">
-      <li><h3>Build your order</h3><p>Add suya, fish and sides, and choose how hot you want each one.</p></li>
-      <li><h3>Pick a time</h3><p>Collect from the grill or get it delivered. Order for tonight or pre-order for the weekend.</p></li>
-      <li><h3>Pay securely</h3><p>Pay by card, Apple Pay or Google Pay. Your receipt comes by email and we start grilling.</p></li>
+    <p class="how-eyebrow">Only 4 steps</p>
+    <h2 class="section-title how-title" id="howTitle">How to order online</h2>
+    <ol class="how-steps">
+      <li>
+        <span class="how-icon" aria-hidden="true"><svg viewBox="0 0 120 90">
+          <path pathLength="1" d="M6 16h14l12 44h58"/>
+          <path pathLength="1" d="M22 24h86l-10 30H30z"/>
+          <path pathLength="1" d="M25 21h84" opacity=".45"/>
+          <path pathLength="1" d="M40 28l3 22M55 28l1 22M70 28v22M85 28l-1 22M99 28l-4 22"/>
+          <path pathLength="1" d="M30 36l7-7M32 44l11-11M36 50l12-12" opacity=".45"/>
+          <path pathLength="1" d="M36 65h56" opacity=".45"/>
+          <circle pathLength="1" cx="44" cy="73" r="8"/><circle pathLength="1" cx="84" cy="73" r="8"/>
+          <circle pathLength="1" cx="44" cy="73" r="2"/><circle pathLength="1" cx="84" cy="73" r="2"/>
+        </svg></span>
+        <h3>Add to your basket</h3>
+        <p>Pick your dishes and choose your heat, from mild to Cameroon pepper.</p>
+      </li>
+      <li>
+        <span class="how-icon" aria-hidden="true"><svg viewBox="0 0 120 90">
+          <rect pathLength="1" x="32" y="8" width="72" height="46" rx="6" transform="rotate(-12 68 31)"/>
+          <path pathLength="1" d="M70 16l14-3M74 23l18-4M78 30l12-2.5" opacity=".45"/>
+          <rect class="solid" pathLength="1" x="14" y="30" width="80" height="50" rx="6"/>
+          <rect pathLength="1" x="24" y="42" width="16" height="12" rx="2"/>
+          <path pathLength="1" d="M24 48h16M32 42v12" opacity=".6"/>
+          <path pathLength="1" d="M24 67h12M42 67h12M60 67h12"/>
+          <path pathLength="1" d="M78 43q4 5 0 10M84 40q7 8 0 16"/>
+        </svg></span>
+        <h3>Checkout online</h3>
+        <p>Choose collection or delivery and a time, then pay by card, Apple Pay or Google Pay.</p>
+      </li>
+      <li>
+        <span class="how-icon" aria-hidden="true"><svg viewBox="0 0 120 90">
+          <circle pathLength="1" cx="26" cy="71" r="12"/><circle pathLength="1" cx="26" cy="71" r="3"/>
+          <circle pathLength="1" cx="96" cy="71" r="12"/><circle pathLength="1" cx="96" cy="71" r="3"/>
+          <path pathLength="1" d="M40 71h32c2-12 9-20 20-22"/>
+          <path pathLength="1" d="M96 71L87 32"/>
+          <path pathLength="1" d="M80 28h14M87 32l-3-8"/>
+          <path pathLength="1" d="M44 48h26q4 0 4-5"/>
+          <path pathLength="1" d="M42 48l-4 12h34"/>
+          <rect pathLength="1" x="10" y="26" width="30" height="24" rx="3"/>
+          <path pathLength="1" d="M10 34h30M22 26v8" opacity=".6"/>
+          <path pathLength="1" d="M12 62q14-13 28 0M82 62q14-13 28 0" opacity=".6"/>
+          <path pathLength="1" d="M0 44h6M0 52h4" opacity=".6"/>
+        </svg></span>
+        <h3>Fresh off the grill</h3>
+        <p>We grill your order to time, ready to collect or delivered hot to your door.</p>
+      </li>
+      <li>
+        <span class="how-icon" aria-hidden="true"><svg viewBox="0 0 120 90">
+          <circle pathLength="1" cx="60" cy="58" r="26"/>
+          <circle pathLength="1" cx="60" cy="58" r="18" opacity=".5"/>
+          <path pathLength="1" d="M18 32v12q0 6 4 6M26 32v12q0 6-4 6M22 32v18M22 50v32"/>
+          <path pathLength="1" d="M100 32q9 11 0 28v22"/>
+          <path pathLength="1" d="M50 24q-6-5 0-10q6-5 0-10M62 24q-6-5 0-10q6-5 0-10M74 24q-6-5 0-10q6-5 0-10" opacity=".7"/>
+        </svg></span>
+        <h3>Enjoy your meal</h3>
+        <p>Unwrap, dig in and taste the charcoal. Then tell us what you think.</p>
+      </li>
     </ol>
   </div>
 </section>
@@ -838,5 +925,8 @@ fillShop(); renderStatus(); renderMenu(); watchSections(); refresh(); measureHea
 setInterval(renderStatus, 60000);
 })();
 </script>
+<script src="hero.js"></script>
+<script src="effects.js"></script>
+<script src="about.js"></script>
 </body>
 </html>

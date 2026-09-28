@@ -63,11 +63,11 @@
       id: "suya", name: "Suya & grills",
       note: "Served with sliced onions, tomatoes and cabbage, plus extra spice on the side.",
       items: [
-        { id: "beef-suya", name: "Tozo", price: 1099, spicy: true, allergens: ["peanuts"],
+        { id: "beef-suya", image: "images/hero-3.jpg", name: "Tozo", price: 1099, spicy: true, allergens: ["peanuts"],
           desc: "Thin-sliced beef rubbed in our house spices and grilled over charcoal until the edges catch." },
         { id: "grilled-pork", name: "Grilled pork", price: 1299, spicy: true,
           desc: "Pork marinated in our house spices and grilled over charcoal until tender and smoky." },
-        { id: "chicken-suya", name: "Chicken suya", price: 850, spicy: true, allergens: ["peanuts"],
+        { id: "chicken-suya", image: "images/hero-1.jpg", name: "Chicken suya", price: 850, spicy: true, allergens: ["peanuts"],
           desc: "Boneless thigh, marinated overnight so it stays juicy on the grill." },
         { id: "ram-suya", name: "Ram suya", price: 1150, spicy: true, allergens: ["peanuts"],
           desc: "Lamb, richer and fattier than beef. The regulars' favourite." },
@@ -81,9 +81,9 @@
       items: [
         { id: "croaker", name: "Grilled croaker", price: 2399, spicy: true, allergens: ["fish"],
           desc: "Whole croaker with pepper sauce, onions and a wedge of lemon." },
-        { id: "mackerel", name: "Peppered mackerel", price: 1599, spicy: true, allergens: ["fish"],
+        { id: "mackerel", image: "images/hero-2.jpg", name: "Peppered mackerel", price: 1599, spicy: true, allergens: ["fish"],
           desc: "Titus mackerel with crisp, smoky skin and soft flesh underneath." },
-        { id: "tilapia", name: "Grilled tilapia", price: 2099, spicy: true, allergens: ["fish"],
+        { id: "tilapia", image: "images/hero-4.jpg", name: "Grilled tilapia", price: 2099, spicy: true, allergens: ["fish"],
           desc: "Whole tilapia, sweet and flaky, finished with our pepper sauce." },
         { id: "catfish", name: "Pepper-grilled catfish", price: 2099, spicy: true, allergens: ["fish"],
           desc: "Point-and-kill style catfish in a thick pepper glaze. Feeds two." }
