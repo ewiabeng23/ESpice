@@ -53,7 +53,7 @@
       { id: "mild", label: "Mild", hint: "A gentle warmth" },
       { id: "medium", label: "Medium", hint: "Proper suya heat" },
       { id: "hot", label: "Hot", hint: "For pepper lovers" },
-      { id: "naija", label: "Naija hot", hint: "You have been warned" }
+      { id: "naija", label: "Cameroon pepper 🌶️", hint: "You have been warned" }
     ]
   };
 
