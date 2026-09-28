@@ -22,19 +22,19 @@
     email: "hello@espice.co.uk",
     instagram: "https://instagram.com/",
     tiktok: "https://tiktok.com/",
-    address: "Unit 4, Example Arches, Rye Lane, London SE15 4ST",
+    address: "Chatham, ME4 6UH",
     hygieneRating: null,                 // set to 5 (etc.) once you have your rating
     checkoutEndpoint: "/api/create-checkout",
 
     // Opening hours, London time. 0 = Sunday ... 6 = Saturday. null = closed.
     hours: {
-      0: ["14:00", "21:00"],
+      0: ["12:00", "21:00"],
       1: null,
       2: null,
       3: ["17:00", "22:00"],
       4: ["17:00", "22:00"],
       5: ["16:00", "23:00"],
-      6: ["14:00", "23:00"]
+      6: ["12:00", "23:00"]
     },
     leadMinutes: 45,     // earliest an order can be ready after it's placed
     slotMinutes: 30,     // gap between pickup/delivery times
@@ -43,9 +43,9 @@
 
     // Delivery areas: postcode districts (the first half of a postcode).
     zones: [
-      { name: "Peckham & Nunhead", outcodes: ["SE15"], fee: 250, minOrder: 1500 },
-      { name: "Camberwell, East Dulwich & New Cross", outcodes: ["SE5", "SE22", "SE14"], fee: 350, minOrder: 2000 },
-      { name: "Brockley, Lewisham & Deptford", outcodes: ["SE4", "SE13", "SE8"], fee: 450, minOrder: 2500 }
+      { name: "South East London", areas: ["SE"], fee: 599, minOrder: 1500 },
+      { name: "East London", areas: ["E"], fee: 699, minOrder: 2500 },
+      { name: "South West, West & North London", areas: ["SW", "W", "N"], fee: 799, minOrder: 3000 }
     ],
 
     defaultSpice: "medium",
@@ -63,15 +63,15 @@
       id: "suya", name: "Suya & grills",
       note: "Served with sliced onions, tomatoes and cabbage, plus extra spice on the side.",
       items: [
-        { id: "beef-suya", image: "images/hero-3.jpg", name: "Tozo", price: 1099, spicy: true, allergens: ["peanuts"],
+        { id: "beef-suya", images: ["images/hero-3.jpg", "images/hero-1.jpg", "images/hero-4.jpg"], name: "Tozo", price: 1099, spicy: true, allergens: ["peanuts"],
           desc: "Thin-sliced beef rubbed in our house spices and grilled over charcoal until the edges catch." },
-        { id: "grilled-pork", name: "Grilled pork", price: 1299, spicy: true,
+        { id: "grilled-pork", images: ["images/hero-1.jpg", "images/hero-3.jpg"], name: "Grilled pork", price: 1299, spicy: true,
           desc: "Pork marinated in our house spices and grilled over charcoal until tender and smoky." },
-        { id: "chicken-suya", image: "images/hero-1.jpg", name: "Chicken suya", price: 850, spicy: true, allergens: ["peanuts"],
+        { id: "chicken-suya", images: ["images/hero-1.jpg", "images/hero-3.jpg"], name: "Chicken suya", price: 850, spicy: true, allergens: ["peanuts"],
           desc: "Boneless thigh, marinated overnight so it stays juicy on the grill." },
-        { id: "ram-suya", name: "Ram suya", price: 1150, spicy: true, allergens: ["peanuts"],
+        { id: "ram-suya", images: ["images/hero-3.jpg", "images/hero-1.jpg"], name: "Ram suya", price: 1150, spicy: true, allergens: ["peanuts"],
           desc: "Lamb, richer and fattier than beef. The regulars' favourite." },
-        { id: "gizzard-suya", name: "Gizzard suya", price: 750, spicy: true, allergens: ["peanuts"],
+        { id: "gizzard-suya", images: ["images/hero-3.jpg"], name: "Gizzard suya", price: 750, spicy: true, allergens: ["peanuts"],
           desc: "Chewy, peppery and made for sharing with a cold drink." }
       ]
     },
@@ -79,13 +79,13 @@
       id: "fish", name: "Grilled fish",
       note: "Whole fish, scored, peppered and grilled to order, then served with our special Cameroonian sauce. Allow about 25 minutes.",
       items: [
-        { id: "croaker", name: "Grilled croaker", price: 2399, spicy: true, allergens: ["fish"],
+        { id: "croaker", images: ["images/hero-4.jpg", "images/hero-2.jpg"], name: "Grilled croaker", price: 2399, spicy: true, allergens: ["fish"],
           desc: "Whole croaker with pepper sauce, onions and a wedge of lemon." },
-        { id: "mackerel", image: "images/hero-2.jpg", name: "Peppered mackerel", price: 1599, spicy: true, allergens: ["fish"],
+        { id: "mackerel", images: ["images/hero-2.jpg", "images/hero-4.jpg"], name: "Peppered mackerel", price: 1599, spicy: true, allergens: ["fish"],
           desc: "Titus mackerel with crisp, smoky skin and soft flesh underneath." },
-        { id: "tilapia", image: "images/hero-4.jpg", name: "Grilled tilapia", price: 2099, spicy: true, allergens: ["fish"],
+        { id: "tilapia", images: ["images/hero-4.jpg", "images/hero-2.jpg", "images/hero-3.jpg"], name: "Grilled tilapia", price: 2099, spicy: true, allergens: ["fish"],
           desc: "Whole tilapia, sweet and flaky, finished with our pepper sauce." },
-        { id: "catfish", name: "Pepper-grilled catfish", price: 2099, spicy: true, allergens: ["fish"],
+        { id: "catfish", images: ["images/hero-4.jpg", "images/hero-2.jpg"], name: "Pepper-grilled catfish", price: 2099, spicy: true, allergens: ["fish"],
           desc: "Point-and-kill style catfish in a thick pepper glaze. Feeds two." }
       ]
     },
@@ -93,9 +93,9 @@
       id: "platters", name: "Platters",
       note: "Everything on one tray, made for sharing, with our special Cameroonian sauce.",
       items: [
-        { id: "suya-for-two", name: "Suya for two", price: 2699, spicy: true, allergens: ["peanuts"],
+        { id: "suya-for-two", images: ["images/hero-3.jpg", "images/hero-1.jpg", "images/hero-4.jpg"], name: "Suya for two", price: 2699, spicy: true, allergens: ["peanuts"],
           desc: "Beef, chicken and ram suya with a side of dodo." },
-        { id: "family-platter", name: "Family grill platter", price: 6599, spicy: true, allergens: ["peanuts", "fish"],
+        { id: "family-platter", images: ["images/hero-3.jpg", "images/hero-4.jpg", "images/hero-1.jpg", "images/hero-2.jpg"], name: "Family grill platter", price: 6599, spicy: true, allergens: ["peanuts", "fish"],
           desc: "Beef and chicken suya, a whole tilapia, grilled pork, dodo, fried yam and miyondo. Feeds four. Want it your way? Tell us in the order notes and we'll customise it." }
       ]
     },
@@ -141,7 +141,8 @@
     var n = normalisePostcode(pc);
     if (!n) return { valid: false };
     var zone = null;
-    for (var i = 0; i < SHOP.zones.length; i++) if (SHOP.zones[i].outcodes.indexOf(n.outcode) !== -1) zone = SHOP.zones[i];
+    var area = n.outcode.replace(/[0-9].*$/, "");
+    for (var i = 0; i < SHOP.zones.length; i++) { var z = SHOP.zones[i]; if ((z.outcodes || []).indexOf(n.outcode) !== -1 || (z.areas || []).indexOf(area) !== -1) zone = z; }
     return { valid: true, postcode: n.full, zone: zone };
   }
 

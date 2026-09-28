@@ -273,7 +273,7 @@ body.drawer-open .toast{bottom:auto;top:calc(76px + env(safe-area-inset-top,0px)
     <div>
       <p class="status" id="status"><span class="status-dot"></span><span id="statusText">Checking today's hours</span></p>
       <h1>Charcoal suya &amp; peppered fish</h1>
-      <p class="lede" id="lede">Hand-sliced beef, chicken and whole fish, rubbed in our house spices and grilled over real charcoal. Order for collection or delivery across south-east London.</p>
+      <p class="lede" id="lede">Hand-sliced beef, chicken and whole fish, rubbed in our house spices and grilled over real charcoal. Order for collection in Chatham or delivery across London.</p>
       <div class="ctas">
         <a class="btn btn-gold" href="#menu">See the menu</a>
         <a class="btn btn-ghost" data-wa target="_blank" rel="noopener">
@@ -642,7 +642,7 @@ function fillShop(){
   }).join("");
 
   $("#zonesList").innerHTML = SHOP.zones.map(function(z){
-    return "<li><strong>" + esc(z.name) + "</strong><span>" + esc(z.outcodes.join(", ")) + ". " + fmt(z.fee) + " delivery, " + fmt(z.minOrder) + " minimum.</span></li>";
+    return "<li><strong>" + esc(z.name) + "</strong><span>" + esc(z.areas ? z.areas.join(", ") + " postcodes" : z.outcodes.join(", ")) + ". " + fmt(z.fee) + " delivery, " + fmt(z.minOrder) + " minimum.</span></li>";
   }).join("");
 }
 function toMin(t){ var p = t.split(":"); return +p[0]*60 + +p[1]; }
@@ -928,5 +928,6 @@ setInterval(renderStatus, 60000);
 <script src="hero.js"></script>
 <script src="effects.js"></script>
 <script src="about.js"></script>
+<script src="gallery.js"></script>
 </body>
 </html>

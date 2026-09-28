@@ -46,13 +46,13 @@ test("prices add up correctly", () => {
 test("delivery fee and minimum order are applied", () => {
   const ok = Shop.priceOrder({ items: [{ id: "beef-suya", qty: 2, spice: "mild" }], fulfilment: "delivery", postcode: "se15 4st" });
   assert.deepEqual(ok.errors, []);
-  assert.equal(ok.deliveryFee, 250);
-  assert.equal(ok.total, Shop.findItem("beef-suya").price * 2 + 250);
+  assert.equal(ok.deliveryFee, Shop.zoneFor("SE15 4ST").zone.fee);
+  assert.equal(ok.total, Shop.findItem("beef-suya").price * 2 + Shop.zoneFor("SE15 4ST").zone.fee);
 
   const tooSmall = Shop.priceOrder({ items: [{ id: "zobo", qty: 1 }], fulfilment: "delivery", postcode: "SE15 4ST" });
   assert.match(tooSmall.errors[0], /minimum order/);
 
-  const outside = Shop.priceOrder({ items: [{ id: "zobo", qty: 10 }], fulfilment: "delivery", postcode: "N1 1AA" });
+  const outside = Shop.priceOrder({ items: [{ id: "zobo", qty: 10 }], fulfilment: "delivery", postcode: "ZE1 0AA" });
   assert.match(outside.errors[0], /don't deliver/);
 });
 
