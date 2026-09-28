@@ -3,59 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Order received</title>
-<meta name="theme-color" content="#0F4D33">
+<title>Order received | ESpice</title>
+<meta name="theme-color" content="#1A1614">
+<meta name="color-scheme" content="dark">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Jost:wght@300..600&display=swap" rel="stylesheet">
 <style>
-:root{--board:#0F4D33;--gold:#F2C14E;--pepper:#C62D1F;--paper:#F3F5EF;--surface:#fff;--ink:#18261E;--muted:#56655B;--line:#D5DDD2;
-  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0E1812;--surface:#15221A;--ink:#E7EEE4;--muted:#9DAEA2;--line:#253629}}
-:root[data-theme="dark"]{--paper:#0E1812;--surface:#15221A;--ink:#E7EEE4;--muted:#9DAEA2;--line:#253629}
+:root{--board:#1A1614;--paper:#14110F;--surface:#1D1916;--gold:#C5A059;--gold-soft:#DCC18A;--ink:#F5F0E6;--muted:#A99D8B;--line:rgba(197,160,89,.18);--heat-ink:#EACBA2;
+  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif;--body:"Jost","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#14110F}}
+:root[data-theme="dark"]{--paper:#14110F}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 "Bricolage Grotesque","Segoe UI",system-ui,sans-serif}
-.top{background:var(--board);border-bottom:3px solid var(--gold);padding:14px 20px}
-.top a{font-family:"Bungee","Arial Black",sans-serif;color:var(--gold);text-decoration:none}
-main{max-width:560px;margin:0 auto;padding:48px 20px 64px}
-h1{font-family:"Bungee","Arial Black",sans-serif;font-weight:400;color:var(--board);font-size:clamp(34px,8vw,48px);line-height:1;margin:0 0 14px;text-shadow:3px 3px 0 var(--gold)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h1{color:var(--gold);text-shadow:3px 3px 0 var(--pepper)}}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;margin:26px 0}
+body{margin:0;min-height:100%;background:radial-gradient(70% 50% at 50% 100%,rgba(224,110,50,.14),transparent 70%) fixed,radial-gradient(120% 70% at 50% 0%,#1D1916 0%,var(--paper) 55%) fixed var(--paper);color:var(--ink);font:300 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+header{background:rgba(26,22,20,.9);border-bottom:1px solid var(--line)}
+.bar{max-width:1180px;margin:0 auto;padding:16px 20px}
+.brand{font-family:var(--display);font-weight:600;font-size:32px;letter-spacing:.04em;color:var(--gold);text-decoration:none}
+main{max-width:620px;margin:0 auto;padding:72px 20px 96px}
+.tick{width:56px;height:56px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;margin-bottom:28px}
+.tick svg{width:24px;height:24px;color:var(--gold)}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(46px,9vw,72px);line-height:1;margin:0 0 18px;
+  background:linear-gradient(180deg,#EAD5A4 0%,#C5A059 60%,#A8843E 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:#CFC5B4;font-size:19px;margin:0}
+.card{border:1px solid var(--line);background:rgba(29,25,22,.7);border-radius:6px;margin:40px 0;padding:6px 22px}
 .card ul{list-style:none;margin:0;padding:0}
-.card li{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--line)}
-.card li:last-child{border-bottom:0;font-weight:800}
+.card li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.card li span:last-child{color:var(--gold);white-space:nowrap}
+.card li small{display:block;color:var(--heat-ink);font-size:13px}
+.card li:last-child{border-bottom:0;font-family:var(--display);font-weight:600;font-size:24px}
 .muted{color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;font:700 16px/1 inherit;padding:15px 24px;border-radius:999px;text-decoration:none;margin:6px 8px 0 0}
-.btn-board{background:var(--board);color:#fff}
-.btn-line{border:2px solid var(--line);color:var(--ink)}
-:focus-visible{outline:3px solid var(--pepper);outline-offset:3px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:500 13px/1 var(--body);text-transform:uppercase;letter-spacing:.12em;padding:17px 28px;border-radius:999px;text-decoration:none;border:1px solid transparent}
+.btn-gold{background:linear-gradient(180deg,#D8B878 0%,#C5A059 50%,#A8843E 100%);color:#17120D;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 6px 18px rgba(0,0,0,.35)}
+.btn-gold:hover{background:linear-gradient(180deg,#E6C98C 0%,#D1AD66 50%,#B38E47 100%)}
+.btn-ghost{border-color:rgba(197,160,89,.6);color:var(--gold-soft)}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(197,160,89,.08)}
+:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px}
 </style>
 </head>
 <body>
-<header class="top"><a href="/" data-fill="name">ESpice</a></header>
+<header><div class="bar"><a class="brand" href="/">ESpice</a></div></header>
 <main>
-  <h1>Order received</h1>
-  <p id="lead">Your payment went through and your order is with the grill team.</p>
+  <div class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+  <h1>Thank you. Your order is in.</h1>
+  <p class="lead" id="lead">Your payment went through and your order is with the grill.</p>
   <div class="card" id="summary" hidden></div>
   <p class="muted">Your receipt is on its way to your email. If anything changes, we'll message you on the number you gave us.</p>
-  <a class="btn btn-board" href="/">Back to the menu</a>
-  <a class="btn btn-line" id="waLink" target="_blank" rel="noopener">Message us on WhatsApp</a>
+  <div class="actions">
+    <a class="btn btn-gold" href="/">Back to the menu</a>
+    <a class="btn btn-ghost" id="waLink" target="_blank" rel="noopener">Message us on WhatsApp</a>
+  </div>
 </main>
 <script src="shop.js"></script>
 <script>
 (function(){
   var S = Shop.SHOP;
-  document.querySelectorAll("[data-fill='name']").forEach(function(el){ el.textContent = S.name; });
   document.getElementById("waLink").href = "https://wa.me/" + S.whatsapp + "?text=" + encodeURIComponent("Hi " + S.name + ", I have a question about my order.");
   function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
   var last = null;
   try { last = JSON.parse(localStorage.getItem("suya-last-order") || "null"); localStorage.removeItem("suya-basket-v1"); } catch(e){}
   if (!last) return;
   document.getElementById("lead").textContent = last.fulfilment === "delivery"
-    ? "Payment received. We'll deliver your order around " + last.when + "."
-    : "Payment received. Your order will be ready to collect at " + last.when + " from " + S.address + ".";
-  var rows = last.lines.map(function(l){ return "<li><span>" + l.qty + " \u00d7 " + esc(l.name) + (l.spiceLabel ? " (" + esc(l.spiceLabel) + ")" : "") + "</span><span>" + Shop.formatPrice(l.total) + "</span></li>"; });
+    ? "We'll deliver your order around " + last.when + "."
+    : "Your order will be ready to collect at " + last.when + " from " + S.address + ".";
+  var rows = last.lines.map(function(l){ return "<li><span>" + l.qty + " \u00d7 " + esc(l.name) + (l.spiceLabel ? "<small>" + esc(l.spiceLabel) + "</small>" : "") + "</span><span>" + Shop.formatPrice(l.total) + "</span></li>"; });
   if (last.deliveryFee) rows.push("<li><span>Delivery</span><span>" + Shop.formatPrice(last.deliveryFee) + "</span></li>");
   rows.push("<li><span>Total paid</span><span>" + Shop.formatPrice(last.total) + "</span></li>");
   var box = document.getElementById("summary"); box.innerHTML = "<ul>" + rows.join("") + "</ul>"; box.hidden = false;
